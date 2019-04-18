@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.detailsMapper">
+
+	<select id="detailsList" resultType="details">
+		select * from details where detailsTypeId=#{detailsTypeId} order by detailsId desc
+	</select>
+	<insert id="addDetails">
+       insert into details (coverPic) values(#{coverPic1})	
+    </insert>
+    <select id="indexDetailsList4" resultType="details">
+    select * from details where detailsTypeId=#{detailsTypeId}  order by orderValue desc , detailsId desc  limit 0,4
+    </select>
+    <select id="indexDetailsList10" resultType="details">
+        select * from details where detailsTypeId=#{detailsTypeId} order by orderValue desc ,  detailsId desc  limit 0,10
+    </select>
+    <select id="indexDetailsList6" resultType="details">
+        select * from details where detailsTypeId=#{detailsTypeId}  order by orderValue desc , detailsId desc  limit 0,6
+    </select>
+    <select id="indexDetailsList1" resultType="details">
+        select * from details where detailsTypeId=#{detailsTypeId}  order by orderValue desc ,detailsId desc  limit 0,1
+    </select>
+    <insert id="addNews">
+      insert into details(title,releaseTime,content,detailsTypeId,coverPic,orderValue,author,addBy)values(#{newstitle},#{newstime},#{newscontent},
+      #{newstypeid},#{newscoverpic},#{newsordervalue},#{newsauthor},#{addby})
+    </insert>
+
+     <select id="getCount" resultType="int">
+      select count(*) from details where detailsTypeId=#{detailsTypeId}
+     </select>
+     <!-- 分页sql语句 -->
+     <select id="selectByPage" resultType="details">
+     select * from details where detailsTypeId=#{detailsTypeId}  order by orderValue desc, detailsId  desc limit #{startPos},#{pageSize} 
+     </select>
+     <select id="getDetails" resultType="details">
+     select * from details where detailsTypeId=#{detailsTypeId} and detailsId=#{detailsId} 
+     </select>
+     <select id="getCountAll" resultType="int">
+     select count(*)from details 
+     </select>
+      <!-- 分页sql语句 -->
+     <select id="selectByPageAll" resultType="details">
+     select * from details  order by detailsId desc  limit #{startPos},#{pageSize}
+     </select>
+     <delete id="delNews">
+     delete from details where detailsId=#{detailsId}
+     </delete>  
+     
+     <select id="editNews" resultType="details">
+     select * from details where detailsId=#{detailsId}
+     </select>
+     <update id="updateNews">
+     update details set  title=#{newsTitle},releaseTime=#{newsTime},content=#{newsContent}, 
+     detailsTypeId=#{newsTypeId},coverPic=#{newsCoverPic},orderValue=#{newsOrderValue},
+     author=#{newsAuthor},addBy=#{addBy} where detailsId=#{newsDetailsId}
+     </update>
+</mapper>

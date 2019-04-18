@@ -1,0 +1,102 @@
+
+.content {
+	/*margin-right: 100px ;
+	margin-left: 210px ;*/
+    /*WIDTH: 1175px ;*/
+    margin-top: 50px;
+}
+
+.content_left {
+    WIDTH: 275px;
+}
+
+.left {
+    FLOAT: left;
+}
+
+.zpzs {
+    WIDTH: 270px;
+}
+
+.lile {
+    BORDER-BOTTOM: #dcece5 1px solid;
+    BORDER-LEFT: #dcece5 1px solid;
+    BORDER-TOP: #dcece5 1px solid;
+    BORDER-RIGHT: #dcece5 1px solid;
+}
+
+.zpzs UL {
+    MARGIN: 8px 0px 15px 8px;
+    WIDTH: 250px;
+    DISPLAY: block;
+}
+
+.zpzs LI {
+    BORDER-BOTTOM: #dedede 1px dashed;
+    LINE-HEIGHT: 28px;
+    PADDING-LEFT: 18px;
+    WIDTH: 232px;
+    DISPLAY: block;
+    BACKGROUND: no-repeat 9px 13px;
+    HEIGHT: 28px;
+    FONT-SIZE: 12px;
+    FONT-WEIGHT: bold;
+}
+
+.zpzs LI A {
+    COLOR: #666;
+    FONT-SIZE: 13px;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none;
+}
+
+/*.right {
+    FLOAT: right;
+}*/
+
+.ri_list {
+    WIDTH: 900px;
+}
+
+.ri_list H2 {
+    BORDER-BOTTOM: #dcece5 1px solid;
+    WIDTH: 674px;
+    DISPLAY: block;
+    BACKGROUND: repeat-x;
+    HEIGHT: 33px;
+}
+
+.ri_list H2 B {
+    LINE-HEIGHT: 33px;
+    PADDING-LEFT: 25px;
+    DISPLAY: block;
+    BACKGROUND:no-repeat 13px 13px;
+    HEIGHT: 33px;
+    FONT-SIZE: 12px;
+    FONT-WEIGHT: normal;
+}
+
+.lis_text {
+    WIDTH: 100%;
+}
+
+.lis_text TD {
+    BORDER-BOTTOM: #d6d6d6 1px dashed;
+    LINE-HEIGHT: 40px;
+    PADDING-LEFT: 20px;
+    BACKGROUND: no-repeat 10px 18px;
+    HEIGHT: 50px;
+    FONT-SIZE: 13px;
+}
+.yuanxin ul li{
+	list-style:  disc;
+	font-size:   16px ;
+	margin-left:50px;
+	border-bottom: 0.5px dashed  #d6d6d6;
+	width: 830px;
+	margin-top: 10px;
+}
+A {
+    TEXT-DECORATION: none;
+}
+
